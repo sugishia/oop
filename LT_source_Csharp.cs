@@ -91,8 +91,6 @@ class Taxi
             //運賃は初乗り運賃
             //運賃結果に初乗り運賃を代入
             this.resultFare = firstSquareFare;
-            //目的地が初乗り距離未満の運賃結果を教える
-            return resultFare;
         }
         //それ以外（目的地が初乗り距離以上）だったら
         else
@@ -108,8 +106,7 @@ class Taxi
             //運賃結果に初乗り運賃と追加運賃を足したものを代入
             //運賃結果　＝　初乗り料金　＋　加算運賃　×　（（（目的地までの残りの距離　÷　加算距離）の商）　+　１）
             this.resultFare = this.firstSquareFare + this.additionalFare * ((int)(remainDistance / this.additionalDistance) + 1);
-            //それ以外（目的地が初乗り距離以上）の運賃結果を教える
-            return this.resultFare;
         }
+        return resultFare;
     }
 }
