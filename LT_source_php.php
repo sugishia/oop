@@ -2,6 +2,7 @@
 
 //タクシー台数、　目的地までの距離
 //入力された文字列を$parameter1に代入　ex："2 1000"
+echo "タクシー台数と目的地までの距離を半角スペース区切りで入力してください\n";
 $parameter1 = trim(fgets(STDIN));
 
 //$parameter1をスペース区切りで配列にして$parameter1_arrayに代入　ex：[2, 1000]
@@ -20,9 +21,11 @@ $taxi_array = [];
 $compareFare = [];
 
 //parameter2を受け取って、タクシー台数分のインスタンス化を行う
+echo "タクシー台数分のパラメータ（初乗り距離、初乗り運賃、加算距離、加算運賃）を半角スペース区切りで入力します\n";
 for($i = 0; $i < $taxiNum; $i++){
     //初乗り距離、 初乗り運賃、 加算距離、 加算運賃
     //入力された文字列を$parameter2に代入　ex："600 200 200 400"
+    echo "{$i + 1}台目のタクシーのパラメータを入力してください\n";
     $parameter2 = trim(fgets(STDIN));
 
     //parameter2をスペース区切りで配列にして$parameter2_arrayに代入　ex：[600, 200, 200, 400]
